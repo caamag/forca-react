@@ -1,0 +1,42 @@
+
+.start{
+    position: absolute;
+    width: 60%;
+    height: 100px;
+    background-color: rgb(116, 116, 116);
+    border-radius: 30px;
+    margin-top: 150px;
+    padding: 30px;
+    text-align: center;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
+
+.start h1{
+    color: white;
+}
+
+.start p{
+    font-size: 1.4rem;
+}
+
+.start button{
+    padding: 10px;
+    width: 20%;
+    border: none;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 250ms;
+    font-weight: 600;
+    background-color: rgb(46, 46, 46);
+    color: white;
+}
+
+.start button:hover{
+    border-radius: 30px;
+    scale: 1.05;
+}
