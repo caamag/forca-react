@@ -55,7 +55,7 @@ function App() {
     setWordSelect(word); 
     setCategorySelect(category); 
     setLetters(wordLetters); 
-    
+
     setGameStage(stages[1].name);
 
   }; 
