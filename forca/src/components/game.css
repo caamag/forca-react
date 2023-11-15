@@ -1,0 +1,41 @@
+
+.game-section{
+    position: absolute;
+    width: 60%;
+    height: 60vh;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    background-color: rgb(38, 38, 38);
+    border-radius: 20px;
+    text-align: center;
+    padding: 40px;
+}
+
+.game-section h1{
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+    font-size: 4rem;
+}
+
+.btn{
+    position: absolute;
+    width: 200px;
+    height: auto;
+    left: 20px;
+    bottom: 20px;
+    padding: 10px;
+    font-size: 1.4rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 250ms;
+    border: none;
+}
+
+.btn:hover{
+    background-color: gray;
+    color: white;
+}

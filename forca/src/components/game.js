@@ -5,11 +5,11 @@ function Game ({verify}) {
 
     return (
 
-        <div>
+        <div className='game-section'>
 
             <h1>Game</h1>
 
-            <button onClick={verify}>Finish</button>
+            <button onClick={verify} className='btn'>Finish</button>
 
         </div>
 
