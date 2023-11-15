@@ -39,3 +39,11 @@
     background-color: gray;
     color: white;
 }
+
+.categoria{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    color: white;
+    font-size: 2rem;
+}
