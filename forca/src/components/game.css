@@ -47,3 +47,72 @@
     color: white;
     font-size: 2rem;
 }
+
+.points{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: white;
+    font-size: 2rem;
+}
+
+.word-container{
+    width:  90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: rgb(191, 191, 191);
+    padding: 30px;
+}
+
+.word-container span{
+    font-size: 2rem;
+    background-color: white;
+    padding: 20px;
+    margin-left: 5px;
+    border: solid black 1px;
+}
+
+.game-section h2{
+    font-size: 1.4rem;
+    color: white;
+    margin-top: 50px;
+}
+
+.letterSelect{
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    text-align: center;
+    border: none;
+}
+
+.gameLetterSelect{
+    width: 20%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.gameLetterSelect form{
+    display: flex;
+}
+
+.btnGame{
+    margin-left: 30px;
+    width: 300px;
+    font-size: 1.4rem;
+    border: none;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.btnGame:hover{
+    border-radius: 10px;
+    background-color: gray;
+    color: white;
+}
+
+.pastLettersP{
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 50px;
+}
