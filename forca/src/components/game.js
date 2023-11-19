@@ -30,8 +30,8 @@ function Game ({verify, wordSelect, categorySelect, letter, guessedLetter, wrong
 
             <p className='pastLettersP'>Letras utilizadas: <br/><span className='pastLetters'>a, b</span></p>
 
-            <p className='categoria'>Dica: <span>dica...</span></p>
-            <p className='points'>Pontos: <span>pontos...</span></p>
+            <p className='categoria'>Dica: <span>{categorySelect}</span></p>
+            <p className='points'>Pontos: <span>{score}</span></p>
 
             <button onClick={verify} className='btn'>Finish</button>
 
