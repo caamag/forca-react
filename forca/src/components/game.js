@@ -12,8 +12,6 @@ function Game ({verify, wordSelect, categorySelect, letters, guessedLetter, wron
         verify(letter); 
 
         setLetter(''); 
-
-
     
     }; 
 

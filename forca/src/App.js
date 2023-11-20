@@ -54,6 +54,8 @@ function App() {
 
   //start Game
   const startGame = () => { 
+    //clear all letters
+    clearLetterStates(); 
 
     const {word, category} = wordAndCategory(); 
 
@@ -100,16 +102,35 @@ function App() {
 
   }
 
-  useEffect(() => {
+//check game over
+useEffect(() => {
 
     if (guesses <= 0 ){
 
       clearLetterStates(); 
 
       setGameStage(stages[2].name)
-    }
+  }
 
 }, [guesses]); 
+
+
+//check win
+useEffect(() => {
+
+  const uniqueLetters = [...new Set(letters)]; 
+
+  //win condition
+  if (guessedLetter.length === uniqueLetters.length) {
+    //add score 
+    setScore((actualScore) => (actualScore += 100)); 
+    alert('Você ganhou mais 100 pontos! Vamos para a próxima palavra...')
+
+    //restart game with a new word
+    startGame(); 
+  }
+
+}, [guessedLetter]);
 
   //Restart
   function restart () { 
