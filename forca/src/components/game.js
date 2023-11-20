@@ -10,8 +10,15 @@ function Game ({verify, wordSelect, categorySelect, letter, guessedLetter, wrong
 
             <div className='word-container'>
 
-                <span className='letter'>A</span>
-                <span className='blankSquare'>A</span>
+                {letter.map((l, i) => (
+
+                    guessedLetter.includes(l) ? (
+                        <span key={i} className='letters'>{l}</span>
+                    ) : (
+                        <span key={i} className='letters'></span>
+                    )
+
+                ))}
 
             </div>
 
@@ -32,6 +39,7 @@ function Game ({verify, wordSelect, categorySelect, letter, guessedLetter, wrong
 
             <p className='categoria'>Dica: <span>{categorySelect}</span></p>
             <p className='points'>Pontos: <span>{score}</span></p>
+            <p className='guesses'>Você ainda tem <span>{guesses}</span> tentativas.</p>
 
             <button onClick={verify} className='btn'>Finish</button>
 

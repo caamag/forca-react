@@ -34,6 +34,9 @@ function App() {
       //select a random word
       const word = words[category][Math.floor(Math.random() * Object.keys(categories).length)]; 
 
+      console.log(word);
+      console.log(category);
+
       return {word, category}
 
   }
