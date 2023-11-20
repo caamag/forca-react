@@ -70,10 +70,55 @@ function App() {
   }; 
 
   //process the letter input
-  function verifyLetter (letter) {console.log(letter)}; 
+  function verifyLetter (letter) {
+
+    const nomalizedLetter = letter.toLowerCase(); 
+
+    //check if letter has already been utilized; 
+    if (guessedLetter.includes(nomalizedLetter) || wrongLetter.includes(nomalizedLetter)) {
+      return; 
+    }
+
+    if(letters.includes(nomalizedLetter)) {
+        setGuessedLetter((actualGuessedLetters) => [
+          ...actualGuessedLetters, nomalizedLetter
+        ])
+    } else{
+      setWrongLetter((actualWrongLetters) => [
+          ...actualWrongLetters, nomalizedLetter
+        ])
+
+      setGuesses((actualGuesses) => actualGuesses - 1); 
+    }
+  
+  }; 
+
+  function clearLetterStates () {
+
+      setGuessedLetter([]); 
+      setWrongLetter([]); 
+
+  }
+
+  useEffect(() => {
+
+    if (guesses <= 0 ){
+
+      clearLetterStates(); 
+
+      setGameStage(stages[2].name)
+    }
+
+}, [guesses]); 
 
   //Restart
-  function restart () { setGameStage(stages[0].name) };
+  function restart () { 
+    
+    setGameStage(stages[0].name); 
+    setScore(0); 
+    setGuesses(10); 
+  
+  };
   
   
 

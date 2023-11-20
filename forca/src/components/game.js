@@ -12,6 +12,8 @@ function Game ({verify, wordSelect, categorySelect, letters, guessedLetter, wron
         verify(letter); 
 
         setLetter(''); 
+
+
     
     }; 
 
@@ -51,7 +53,7 @@ function Game ({verify, wordSelect, categorySelect, letters, guessedLetter, wron
                 
                 {wrongLetter.map((l, i) => (
 
-                    <span key={i}>{l}</span>
+                    <span key={i}>{l}, </span>
 
                 ))}
                 
