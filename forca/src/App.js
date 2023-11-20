@@ -140,7 +140,7 @@ function App() {
       guesses={guesses}
       score={score}/>}
 
-      {gameStage == 'end' && <End restart={restart}/>}
+      {gameStage == 'end' && <End restart={restart} score ={score}/>}
 
     </div>
   );

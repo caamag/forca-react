@@ -63,8 +63,6 @@ function Game ({verify, wordSelect, categorySelect, letters, guessedLetter, wron
             <p className='points'>Pontos: <span>{score}</span></p>
             <p className='guesses'>Você ainda tem <span>{guesses}</span> tentativas.</p>
 
-            <button onClick={verify} className='btn'>Finish</button>
-
         </div>
     )
 
