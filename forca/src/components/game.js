@@ -1,7 +1,19 @@
 
 import './game.css'; 
+import { useState } from 'react';
 
-function Game ({verify, wordSelect, categorySelect, letter, guessedLetter, wrongLetter, guesses, score}) {
+function Game ({verify, wordSelect, categorySelect, letters, guessedLetter, wrongLetter, guesses, score}) {
+
+    const [letter, setLetter] = useState(""); 
+
+    function preventSubmit (e) {
+        
+        e.preventDefault(); 
+        verify(letter); 
+
+        setLetter(''); 
+    
+    }; 
 
     return (
         <div className='game-section'>
@@ -10,7 +22,7 @@ function Game ({verify, wordSelect, categorySelect, letter, guessedLetter, wrong
 
             <div className='word-container'>
 
-                {letter.map((l, i) => (
+                {letters.map((l, i) => (
 
                     guessedLetter.includes(l) ? (
                         <span key={i} className='letters'>{l}</span>
@@ -26,16 +38,24 @@ function Game ({verify, wordSelect, categorySelect, letter, guessedLetter, wrong
 
             <div className='gameLetterSelect'>
 
-                <form>
+                <form onSubmit={preventSubmit}>
 
-                    <input type="text" className='letterSelect' maxLength={1}/>
+                    <input type="text" className='letterSelect' maxLength={1} onChange={(e) => setLetter(e.target.value)} value={letter}/>          
                     <button className='btnGame'>Jogar</button>
 
                 </form>
 
             </div>
 
-            <p className='pastLettersP'>Letras utilizadas: <br/><span className='pastLetters'>a, b</span></p>
+            <p className='pastLettersP'>Letras utilizadas:<br/><span className='pastLetters'>
+                
+                {wrongLetter.map((l, i) => (
+
+                    <span key={i}>{l}</span>
+
+                ))}
+                
+            </span></p>
 
             <p className='categoria'>Dica: <span>{categorySelect}</span></p>
             <p className='points'>Pontos: <span>{score}</span></p>

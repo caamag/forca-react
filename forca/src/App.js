@@ -70,7 +70,7 @@ function App() {
   }; 
 
   //process the letter input
-  function verifyLetter () { setGameStage(stages[2].name) }; 
+  function verifyLetter (letter) {console.log(letter)}; 
 
   //Restart
   function restart () { setGameStage(stages[0].name) };
@@ -89,7 +89,7 @@ function App() {
       verify={verifyLetter} 
       wordSelect={wordSelect} 
       categorySelect={categorySelect} 
-      letter={letters}
+      letters={letters}
       guessedLetter={guessedLetter}
       wrongLetter={wrongLetter}
       guesses={guesses}
